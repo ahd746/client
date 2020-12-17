@@ -15,6 +15,6 @@ There is 3 levels of Auth:
 ## Account
 
 You can create your own account
-Email: admin@admin.com Password: admin
-Email: batman@dc.com Password: root
-Email: hulk@green.com Password: root
+Email: admin@admin.com Password: admin <br />
+Email: batman@dc.com Password: root <br />
+Email: hulk@green.com Password: root <br />
