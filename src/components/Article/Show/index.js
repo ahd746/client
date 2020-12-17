@@ -18,7 +18,7 @@ const Show = () => {
 
   const isUser = useCallback(() => {
     if (articleLoading && userLoading) {
-      if (userDetails.name === article.author) {
+      if (userDetails.name === article.author || userDetails.name === "admin") {
         setLoading(true);
       }
     }
