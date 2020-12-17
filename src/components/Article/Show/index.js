@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect, useCallback } from 'react'
 import { useParams } from 'react-router-dom';
 import Axios from 'axios';
 import { GlobalStoreContext } from '../../shared/Globals';
@@ -11,18 +11,18 @@ const Show = () => {
   const { globalStore } = useContext(GlobalStoreContext);
   const { user } = useContext(UserContext);
   const [article, setArticle] = useState([]);
-  const [userDetails, setUserDetails] = useState(null);
+  const [userDetails, setUserDetails] = useState("");
   const [userLoading, setUserLoading] = useState(false);
   const [articleLoading, setArticleLoading] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const isUser = () => {
+  const isUser = useCallback(() => {
     if (articleLoading && userLoading) {
       if (userDetails.name === article.author) {
         setLoading(true);
       }
     }
-  }
+  }, [article.author, articleLoading, userDetails.name, userLoading]);
   useEffect(() => {
     Axios.get(`${globalStore.REACT_APP_ENDPOINT}/articles/${id}`)
       .then(({ data }) => {
