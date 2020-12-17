@@ -12,9 +12,9 @@ There is 3 levels of Auth:
 2. login user can read any article. create his article and edit/delete only his articles
 3. admin can do CRUD on all articles
 
-## Account
+## Accounts
 
-You can create your own account
+You can create your own account <br />
 Email: admin@admin.com Password: admin <br />
 Email: batman@dc.com Password: root <br />
 Email: hulk@green.com Password: root <br />
