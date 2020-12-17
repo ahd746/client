@@ -10,7 +10,7 @@ const Home = () => {
         <p>
           Read, Create, Update, Delete your Blogs
         </p>
-        <img src={ImageURL} alt=""/>
+        <img src={ImageURL} className="img-fluid" alt=""/>
       </Header>
       <Container>
         <p>Have fun read our blogs and create account to create your own blogs</p>
