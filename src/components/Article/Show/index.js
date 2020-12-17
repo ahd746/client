@@ -40,7 +40,7 @@ const Show = () => {
         setUserLoading(true);
         isUser();
       });
-  }, [globalStore, isUser]);
+  }, [globalStore, user.token, isUser]);
 
 
   return (
